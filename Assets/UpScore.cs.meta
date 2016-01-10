@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: a93371ed0212f459a9978afa7cfc0331
+timeCreated: 1451452864
+licenseType: Free
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences:
+  - player: {fileID: 100006, guid: 7655b7b9fc2905e43ae318c522e29d36, type: 2}
+  - alian: {fileID: 100104, guid: 1788cc5d786bdab41ac4cd69611d665e, type: 2}
+  - scoreText: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
