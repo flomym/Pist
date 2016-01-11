@@ -9,28 +9,19 @@ public class gameOverScript : MonoBehaviour {
 	bool next = false;
 
 	void Start () {
-		//this.gameObject.GetComponent<Text>().enabled = false;
 		GameOver = GameObject.Find("GameOver");
 
 	}
 	
 	void Update(){
 		if (levelTimeScript.finish == true){
-			//this.gameObject.GetComponent<Text>().enabled = true;
 			this.GetComponent<Text>().text  = "GAME OVER";
 			if (levelTimeScript.next == true){
 				Application.LoadLevel("title");
 			}
+			if ( levelTimeScript.erase == true){
+				this.GetComponent<Text>().text = "";
+			}
 		}
-	}
-	private IEnumerator Wait() {
-	    // ログ出力
-	    Debug.Log ("1");
-	 
-	    // 1秒待つ
-	    yield return new WaitForSeconds (1);
-	    Debug.Log ("2");
-
-	    Application.LoadLevel("title");
 	}
 }

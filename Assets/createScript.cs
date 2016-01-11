@@ -15,7 +15,7 @@ public class createScript : MonoBehaviour {
 
 	Vector3 position;
 
-	float enemyBorder = 80;
+	float enemyBorder = 60;
 	float x = 0;
 
 	void Update ()

@@ -8,6 +8,8 @@ public class moveAlien : MonoBehaviour {
 	public GameObject alien;
 	public Rigidbody rb;
 
+    public int life = 5;    //体力
+
 	bool collider = false;
 	int cnt = 0;
 	
@@ -18,12 +20,11 @@ public class moveAlien : MonoBehaviour {
 		Camera = GameObject.Find("Main Camera");
 		rb = GetComponent<Rigidbody>();
 		score = GameObject.Find("ScoreText").GetComponent<Text>();
+
 	}
 
 	// Update is called once per frame
 	void Update () {
-
-		//Debug.Log("Camera = "+Camera.transform.position.z);
 
 		if ( Countdown.StartGame == true) {
 
@@ -39,13 +40,6 @@ public class moveAlien : MonoBehaviour {
 				rb.velocity = new Vector3(10f, rb.velocity.y, -35f);
 			}
 			else rb.velocity = new Vector3(-10f,rb.velocity.y,-35f);
-
-			//エイリアンが車に当たるとスコアを−１０にする
-			/*if ( (Mathf.Sqrt(Mathf.Pow(alian.transform.position.x – rb.velocity.x, 2) + Mathf.Pow (alian.transform.position.y – rb.velocity.y, 2) < 5.0000000f) {
-
-				ScoreText.SendMessage("MinusScore");
-				Debug.Log("メッセージ送信");
-			}*/
 		}
 	}
 }
